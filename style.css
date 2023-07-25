@@ -1,3 +1,7 @@
+:root {
+  --theme-color: #202123;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -14,11 +18,17 @@ body {
 img {
   height: 20px;
 }
+
 .sidebar {
   display: grid;
   grid-template-rows: 1fr 3fr 1fr;
   align-items: center;
   height: 100vh; /* ATENTION*/
+  background-color: var(--theme-color);
+  color: white;
+}
+.sidebar img {
+  filter: brightness(0) invert(1);
 }
 
 .dashboard {
