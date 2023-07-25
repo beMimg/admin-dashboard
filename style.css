@@ -13,6 +13,9 @@ body {
   height: 100vh; /*ATENTION */
   display: grid;
   grid-template-columns: 1fr 5fr;
+  font-family: Söhne, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto,
+    Ubuntu, Cantarell, Noto Sans, sans-serif, Helvetica Neue, Arial,
+    Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
 }
 
 img {
@@ -27,6 +30,7 @@ img {
   background-color: var(--theme-color);
   color: white;
 }
+
 .sidebar img {
   filter: brightness(0) invert(1);
 }
@@ -48,7 +52,7 @@ img {
 
 .content {
   display: grid;
-  grid-template-rows: 1fr 3fr;
+  grid-template-rows: 200px auto;
 }
 
 .header {
@@ -56,6 +60,60 @@ img {
   grid-template-rows: 1fr 1fr;
   grid-template-columns: 1fr 1fr;
 }
+
+.search {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+#search {
+  width: 350px;
+  border-radius: 8px;
+
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px 0 0 5px;
+}
+
+.user {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.avatar img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+}
+
+.greetings {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  justify-content: space-evenly;
+}
+
+.links {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.links a {
+  text-decoration: none;
+  color: inherit;
+  background-color: var(--theme-color);
+  width: 100px;
+  color: white;
+  text-align: center;
+  border-radius: 8px;
+}
+
 .container {
   display: grid;
   grid-template-columns: 3fr 1fr;
