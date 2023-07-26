@@ -8,7 +8,7 @@ body {
   font-family: Arial, sans-serif;
   font-size: 16px;
   line-height: 1.6;
-  height: 100vh; /*ATENTION */
+  height: 100vh;
   display: grid;
   grid-template-columns: 1fr 5fr;
   font-family: Söhne, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto,
@@ -25,13 +25,19 @@ a {
 
 img {
   height: 20px;
+  transition: transform 0.3s ease;
+}
+
+img:hover {
+  transform: scale(1.2);
+  cursor: pointer;
 }
 
 .sidebar {
   display: grid;
   grid-template-rows: 1fr 3fr 1fr;
   align-items: center;
-  height: 100vh; /* ATENTION*/
+  height: 100%;
   background-color: var(--theme-color);
   color: white;
 }
@@ -45,6 +51,7 @@ img {
   flex-direction: row;
   align-items: center;
   justify-content: space-evenly;
+  flex-wrap: wrap;
 }
 
 .option {
@@ -71,6 +78,7 @@ img {
   grid-template-columns: 1fr 1fr;
   -webkit-box-shadow: 5px 5px 15px 5px #000000;
   box-shadow: 5px 5px 15px 5px #000000;
+  background-color: white;
 }
 
 .search {
@@ -82,11 +90,10 @@ img {
 
 #search {
   width: 350px;
-  border-radius: 8px;
 
   padding: 8px;
   border: 1px solid #ccc;
-  border-radius: 5px 0 0 5px;
+  border-radius: 8px;
 }
 
 .user {
@@ -100,13 +107,28 @@ img {
   width: 60px;
   height: 60px;
   border-radius: 50%;
+  transition: transform 0.3s ease;
+}
+
+.avatar img:hover {
+  transform: translateY(-2px);
 }
 
 .greetings {
   display: flex;
   align-items: center;
-  gap: 20px;
-  justify-content: space-evenly;
+  gap: 40px;
+  padding-left: 100px;
+}
+
+.greetings img {
+  height: 90px;
+  width: 90px;
+}
+.greetings-username p,
+.greetings-username h5 {
+  margin: 0;
+  font-size: 1.2rem;
 }
 
 .links {
@@ -124,6 +146,11 @@ img {
   color: white;
   text-align: center;
   border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+.links a:hover {
+  transform: scale(1.2);
 }
 
 .container {
@@ -159,13 +186,18 @@ img {
   flex-direction: column;
   justify-content: space-between;
 
+  -webkit-box-shadow: 0px 0px 15px 5px #000000;
+  box-shadow: 0px 0px 15px 5px #000000;
   padding: 5px;
   border-left: 5px solid var(--theme-color);
   border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
   background-color: white;
+  transition: transform 0.3s ease;
 }
 
+.card:hover {
+  transform: translateY(-2px);
+}
 .card-actions {
   display: flex;
   justify-content: end;
@@ -182,6 +214,13 @@ img {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
   background-color: white;
   margin: 15px;
+  -webkit-box-shadow: 0px 0px 15px 5px #000000;
+  box-shadow: 0px 0px 15px 5px #000000;
+  transition: transform 0.3s ease;
+}
+
+.news-card-container:hover {
+  transform: scale(1.03);
 }
 
 .news-card {
@@ -207,6 +246,13 @@ img {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
   background-color: white;
   margin: 15px;
+  -webkit-box-shadow: 0px 0px 15px 5px #000000;
+  box-shadow: 0px 0px 15px 5px #000000;
+  transition: transform 0.3s ease;
+}
+
+.trending-card-container:hover {
+  transform: scale(1.03);
 }
 
 .trending-card {
@@ -214,6 +260,7 @@ img {
   flex-direction: row;
   align-items: center;
   justify-content: space-evenly;
+
   gap: 40px;
   font-size: 0.8rem;
   border-bottom: 2px solid rgba(0, 0, 0, 0.12);
@@ -229,4 +276,8 @@ img {
 #title,
 #text {
   margin: 0;
+}
+
+.news-title {
+  margin-left: 16px;
 }
