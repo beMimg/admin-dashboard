@@ -143,6 +143,7 @@ img:hover {
   flex-direction: row;
   align-items: center;
   justify-content: space-evenly;
+  flex-wrap: wrap;
 }
 
 .links a {
@@ -286,4 +287,61 @@ img:hover {
 
 .news-title {
   margin-left: 16px;
+}
+
+@media (max-width: 767px) {
+  body {
+    font-size: 14px;
+    grid-template-columns: 1fr;
+  }
+
+  .content {
+    grid-template-rows: auto;
+  }
+
+  .header {
+    grid-template-rows: auto;
+    gap: 40px;
+    grid-template-columns: 1fr;
+    padding: 10px;
+  }
+
+  .greetings {
+    padding-left: 10px;
+    gap: 10px;
+  }
+
+  .greetings img {
+    height: 60px;
+    width: 60px;
+  }
+
+  .greetings-username p,
+  .greetings-username h5 {
+    font-size: 1rem;
+  }
+
+  .sidebar {
+    display: flex;
+    max-height: 500px;
+    justify-content: space-around;
+  }
+
+  .container {
+    grid-template-columns: 1fr;
+  }
+
+  .projects {
+    grid-template-rows: auto;
+  }
+
+  .news {
+    grid-template-rows: auto;
+  }
+
+  .card,
+  .news-card-container,
+  .trending-card-container {
+    grid-template-rows: auto;
+  }
 }
